@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>requestAnimationFrame 和 setTimeout/setInterval 有什么区别？ | 枫叶半山雨的个人网站</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="枫叶半山雨, lijianru">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.de1e4bd5.js" as="script"><link rel="preload" href="/assets/js/2.5fadc277.js" as="script"><link rel="preload" href="/assets/js/23.0fcb3190.js" as="script"><link rel="prefetch" href="/assets/js/10.ecb90a66.js"><link rel="prefetch" href="/assets/js/11.ba9e8b71.js"><link rel="prefetch" href="/assets/js/12.8c8be28c.js"><link rel="prefetch" href="/assets/js/13.ab86411b.js"><link rel="prefetch" href="/assets/js/14.e8675386.js"><link rel="prefetch" href="/assets/js/15.feb59559.js"><link rel="prefetch" href="/assets/js/16.ca7ca4ab.js"><link rel="prefetch" href="/assets/js/17.7de175b0.js"><link rel="prefetch" href="/assets/js/18.fb9e9c65.js"><link rel="prefetch" href="/assets/js/19.11eadc24.js"><link rel="prefetch" href="/assets/js/20.549a94b0.js"><link rel="prefetch" href="/assets/js/21.9a134f9d.js"><link rel="prefetch" href="/assets/js/22.f0969ee3.js"><link rel="prefetch" href="/assets/js/24.3c031aa8.js"><link rel="prefetch" href="/assets/js/25.7c222eae.js"><link rel="prefetch" href="/assets/js/26.c7970085.js"><link rel="prefetch" href="/assets/js/27.fc134325.js"><link rel="prefetch" href="/assets/js/28.32a11c70.js"><link rel="prefetch" href="/assets/js/29.238d60af.js"><link rel="prefetch" href="/assets/js/3.a1e497c8.js"><link rel="prefetch" href="/assets/js/30.6e9946ef.js"><link rel="prefetch" href="/assets/js/31.db0153df.js"><link rel="prefetch" href="/assets/js/32.c6b21ebe.js"><link rel="prefetch" href="/assets/js/33.d5b15dec.js"><link rel="prefetch" href="/assets/js/34.b5881973.js"><link rel="prefetch" href="/assets/js/35.9bd4d2ff.js"><link rel="prefetch" href="/assets/js/36.6e8ca318.js"><link rel="prefetch" href="/assets/js/37.1fb9fae1.js"><link rel="prefetch" href="/assets/js/38.4a241b71.js"><link rel="prefetch" href="/assets/js/39.dad9dbd4.js"><link rel="prefetch" href="/assets/js/4.7b6dc275.js"><link rel="prefetch" href="/assets/js/40.0204f3de.js"><link rel="prefetch" href="/assets/js/41.c0143c94.js"><link rel="prefetch" href="/assets/js/42.26a157c8.js"><link rel="prefetch" href="/assets/js/43.6e9ae4cd.js"><link rel="prefetch" href="/assets/js/44.0842758c.js"><link rel="prefetch" href="/assets/js/45.dd66bae3.js"><link rel="prefetch" href="/assets/js/46.d70282cd.js"><link rel="prefetch" href="/assets/js/47.cca7faa1.js"><link rel="prefetch" href="/assets/js/48.f7685a2e.js"><link rel="prefetch" href="/assets/js/49.f51e4195.js"><link rel="prefetch" href="/assets/js/5.4f56dc33.js"><link rel="prefetch" href="/assets/js/50.60b09cf5.js"><link rel="prefetch" href="/assets/js/6.72ad7c85.js"><link rel="prefetch" href="/assets/js/7.46f20d13.js"><link rel="prefetch" href="/assets/js/8.7db93e73.js"><link rel="prefetch" href="/assets/js/9.efc7d20e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="枫叶半山雨的个人网站" class="logo"> <span class="site-name can-hide">枫叶半山雨的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/daily/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/daily/html.html" class="sidebar-link">HTML篇</a></li><li><a href="/daily/css.html" class="sidebar-link">CSS篇</a></li><li><a href="/daily/javaScript-01-简介、脚本的引入.html" class="sidebar-link">JS篇-简介、脚本的引入</a></li><li><a href="/daily/javaScript-02-数据类型、操作符、语句.html" class="sidebar-link">JS篇-数据类型、操作符、语句</a></li><li><a href="/daily/javaScript-03-函数、作用域、this、闭包.html" class="sidebar-link">JS篇-函数、作用域、this、闭包</a></li><li><a href="/daily/javaScript-04-原型、原型链、继承.html" class="sidebar-link">JS篇-原型、原型链、继承</a></li><li><a href="/daily/javaScript-06-异步.html" class="sidebar-link">JS篇-异步</a></li><li><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html" class="active sidebar-link">JS篇-BOM、DOM、事件、JS动画</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html#requestanimationframe-和-settimeout-setinterval-有什么区别" class="sidebar-link">requestAnimationFrame 和 setTimeout/setInterval 有什么区别？</a></li><li class="sidebar-sub-header"><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html#什么是事件-什么是事件流-浏览器事件代理机制的原理是什么-为什么需要事件代理" class="sidebar-link">什么是事件？什么是事件流？浏览器事件代理机制的原理是什么？为什么需要事件代理？</a></li><li class="sidebar-sub-header"><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html#dom节点创建和修改有哪些常用的api" class="sidebar-link">DOM节点创建和修改有哪些常用的API？</a></li></ul></li><li><a href="/daily/javaScript-08-其他.html" class="sidebar-link">JS篇-其他</a></li><li><a href="/daily/算法.html" class="sidebar-link">算法篇</a></li><li><a href="/daily/浏览器&amp;网络&amp;安全&amp;性能优化.html" class="sidebar-link">浏览器&amp;网络&amp;安全&amp;性能优化篇</a></li><li><a href="/daily/React.html" class="sidebar-link">React篇</a></li><li><a href="/daily/webpack.html" class="sidebar-link">webpack篇</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="requestanimationframe-和-settimeout-setinterval-有什么区别"><a href="#requestanimationframe-和-settimeout-setinterval-有什么区别" class="header-anchor">#</a> requestAnimationFrame 和 setTimeout/setInterval 有什么区别？</h2> <ul><li>在requestAnimationFrame出现之前，主要使用setTimeout/setInterval来编写JS动画，但是setTimeout/setInterval有一个显著的缺陷就是时间是不精确的，setTimeout/setInterval只能保证延时或者间隔不小于设定时间。</li> <li>requestAnimationFrame是浏览器用于定时循环操作的一个接口，类似于setTimeout，主要用途是按帧对网页进行重绘，让各种网页动画效果（DOM动画、Canvas动画、SVG动画、WebGL动画）能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果。</li> <li>requestAnimationFrame不需要设置时间，采用系统时间间隔（帧率）</li> <li>requestAnimationFrame一旦页面不处于当前标签页就会自动停止刷新</li> <li>requestAnimationFrame是在主线程完成的，如果主线程非常繁忙，动画效果会打折扣</li></ul> <h2 id="什么是事件-什么是事件流-浏览器事件代理机制的原理是什么-为什么需要事件代理"><a href="#什么是事件-什么是事件流-浏览器事件代理机制的原理是什么-为什么需要事件代理" class="header-anchor">#</a> 什么是事件？什么是事件流？浏览器事件代理机制的原理是什么？为什么需要事件代理？</h2> <ul><li>DOM允许JavaScript对HTML事件作出反应。即操作对应的HTML元素时会触发相应的事件</li> <li>DOM结构是一个树形结构，当一个HTML元素产生一个事件时，该事件会在元素节点与根节点之间的路径传播，路径所经过的节点都会收到该事件，这个传播的过程可称为DOM事件流。IE最早使用的是事件冒泡事件流，而网景采用的是事件捕获。DOM2把事件流分为三个阶段，捕获阶段、目标阶段、冒泡阶段，现代浏览器遵循的就是此规范。
+<img src="https://user-gold-cdn.xitu.io/2019/4/22/16a42bde5aadba59?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="事件流"></li> <li>事件代理又称为事件委托，在祖先DOM元素绑定一个事件，当触发子孙级的DOM元素事件时利用事件冒泡的原理来触发绑定在祖先级DOM的事件。因为事件会从目标元素一层层冒泡至document对象。</li> <li>原因：
+<ul><li>添加到页面上的事件数量会影响页面的运行性能，如果添加的事件过多，会导致网页性能下降。采用事件代理的方式可以大大减少注册事件的个数。</li> <li>适用于动态增加的元素。</li> <li>不用担心注册了事件的DOM元素被移除后，可能无法回收其事件处理程序的问题。</li></ul></li></ul> <h2 id="dom节点创建和修改有哪些常用的api"><a href="#dom节点创建和修改有哪些常用的api" class="header-anchor">#</a> DOM节点创建和修改有哪些常用的API？</h2> <ul><li>创建节点
+<ul><li>createElement</li> <li>createTextNode</li> <li>createDocumentFragment</li></ul></li> <li>修改节点
+<ul><li>appendChild</li> <li>insertBefore</li> <li>removeChild</li> <li>replaceChild</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/daily/javaScript-06-异步.html" class="prev">
+        JS篇-异步
+      </a></span> <span class="next"><a href="/daily/javaScript-08-其他.html">
+        JS篇-其他
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.de1e4bd5.js" defer></script><script src="/assets/js/2.5fadc277.js" defer></script><script src="/assets/js/23.0fcb3190.js" defer></script>
+  </body>
+</html>
