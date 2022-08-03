@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本数据类型 | 半山烟雨的个人网站</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script> if (
+    !sessionStorage.getItem('_swa') &&
+    document.referrer.indexOf(location.protocol + '//' + location.host) !== 0
+  ) {
+    fetch(
+      'https://counter.dev/track?' +
+        new URLSearchParams({
+          referrer: document.referrer,
+          screen: screen.width + 'x' + screen.height,
+          user: 'lijianru',
+          utcoffset: '8',
+        })
+    );
+  }
+  sessionStorage.setItem('_swa', '1');</script>
+    <meta name="description" content="半山烟雨, lijianru">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.485de0ca.js" as="script"><link rel="preload" href="/assets/js/2.f72d9393.js" as="script"><link rel="preload" href="/assets/js/44.48bf98df.js" as="script"><link rel="prefetch" href="/assets/js/10.8b7f77f6.js"><link rel="prefetch" href="/assets/js/11.31ed5bc2.js"><link rel="prefetch" href="/assets/js/12.dd35bbe2.js"><link rel="prefetch" href="/assets/js/13.7637e0f0.js"><link rel="prefetch" href="/assets/js/14.88366b12.js"><link rel="prefetch" href="/assets/js/15.fb18ecd1.js"><link rel="prefetch" href="/assets/js/16.e17839c4.js"><link rel="prefetch" href="/assets/js/17.1d5d3358.js"><link rel="prefetch" href="/assets/js/18.55e4d89c.js"><link rel="prefetch" href="/assets/js/19.4481dba9.js"><link rel="prefetch" href="/assets/js/20.8b2f2f73.js"><link rel="prefetch" href="/assets/js/21.f5c0946f.js"><link rel="prefetch" href="/assets/js/22.659f5382.js"><link rel="prefetch" href="/assets/js/23.e7c5a249.js"><link rel="prefetch" href="/assets/js/24.69cf8071.js"><link rel="prefetch" href="/assets/js/25.c36628a8.js"><link rel="prefetch" href="/assets/js/26.9d84755d.js"><link rel="prefetch" href="/assets/js/27.701ab03e.js"><link rel="prefetch" href="/assets/js/28.c265cf41.js"><link rel="prefetch" href="/assets/js/29.34a6fc0d.js"><link rel="prefetch" href="/assets/js/3.20fa9ed5.js"><link rel="prefetch" href="/assets/js/30.29409ba0.js"><link rel="prefetch" href="/assets/js/31.e845f04f.js"><link rel="prefetch" href="/assets/js/32.372ff8ec.js"><link rel="prefetch" href="/assets/js/33.20583bbf.js"><link rel="prefetch" href="/assets/js/34.5027a72f.js"><link rel="prefetch" href="/assets/js/35.837bf1c9.js"><link rel="prefetch" href="/assets/js/36.545c82f9.js"><link rel="prefetch" href="/assets/js/37.5c6ba971.js"><link rel="prefetch" href="/assets/js/38.f436f44b.js"><link rel="prefetch" href="/assets/js/39.6ff7877a.js"><link rel="prefetch" href="/assets/js/4.0cf0b3b5.js"><link rel="prefetch" href="/assets/js/40.27c26fd6.js"><link rel="prefetch" href="/assets/js/41.a31a8d54.js"><link rel="prefetch" href="/assets/js/42.0d8f611b.js"><link rel="prefetch" href="/assets/js/43.f667af3d.js"><link rel="prefetch" href="/assets/js/45.8e3ff653.js"><link rel="prefetch" href="/assets/js/46.c1f7ef9b.js"><link rel="prefetch" href="/assets/js/47.61ec84a2.js"><link rel="prefetch" href="/assets/js/48.1b967f2a.js"><link rel="prefetch" href="/assets/js/49.bf33b59e.js"><link rel="prefetch" href="/assets/js/5.0559d5c3.js"><link rel="prefetch" href="/assets/js/50.82b35738.js"><link rel="prefetch" href="/assets/js/51.3f34ab2c.js"><link rel="prefetch" href="/assets/js/52.0a29b33a.js"><link rel="prefetch" href="/assets/js/53.b4b3d768.js"><link rel="prefetch" href="/assets/js/54.95def4c3.js"><link rel="prefetch" href="/assets/js/55.e55b9e6f.js"><link rel="prefetch" href="/assets/js/56.c35d7ed9.js"><link rel="prefetch" href="/assets/js/57.d62f768a.js"><link rel="prefetch" href="/assets/js/58.551418cc.js"><link rel="prefetch" href="/assets/js/59.3e12c612.js"><link rel="prefetch" href="/assets/js/6.45c573e9.js"><link rel="prefetch" href="/assets/js/60.a8575d9c.js"><link rel="prefetch" href="/assets/js/61.28bfbee7.js"><link rel="prefetch" href="/assets/js/62.ece6c483.js"><link rel="prefetch" href="/assets/js/63.2829db51.js"><link rel="prefetch" href="/assets/js/64.bf762787.js"><link rel="prefetch" href="/assets/js/65.e7aff98b.js"><link rel="prefetch" href="/assets/js/66.97c9b599.js"><link rel="prefetch" href="/assets/js/67.4798fef6.js"><link rel="prefetch" href="/assets/js/68.1bb36f4d.js"><link rel="prefetch" href="/assets/js/69.65aa1340.js"><link rel="prefetch" href="/assets/js/7.8e088433.js"><link rel="prefetch" href="/assets/js/8.3c1f64f7.js"><link rel="prefetch" href="/assets/js/9.74b3dc88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="半山烟雨的个人网站" class="logo"> <span class="site-name can-hide">半山烟雨的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/frame/typescript/01.ts中的数据类型.html" class="active sidebar-link">ts中的数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frame/typescript/01.ts中的数据类型.html#基本数据类型" class="sidebar-link">基本数据类型</a></li></ul></li><li><a href="/frame/typescript/02.类型.html" class="sidebar-link">类型</a></li><li><a href="/frame/typescript/03.内置对象的类型.html" class="sidebar-link">内置对象的类型</a></li><li><a href="/frame/typescript/04.装饰器.html" class="sidebar-link">装饰器</a></li><li><a href="/frame/typescript/05.模块与命名空间.html" class="sidebar-link">模块与命名空间</a></li><li><a href="/frame/typescript/06.typescript编译原理.html" class="sidebar-link">typescript编译原理</a></li><li><a href="/frame/typescript/07.Typescript项目配置.html" class="sidebar-link">Typescript项目配置</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h2> <blockquote><p>TypeScript 支持与 JavaScript 几乎相同的数据类型，此外还提供了枚举类型</p></blockquote> <ul><li>布尔值</li> <li>数字</li> <li>字符串</li> <li>数组（数组内元素类型相同）</li> <li>元组（元组内元素类型可以不相同）
+<ul><li>访问一个已知元素会得到正确的类型</li> <li>访问越界元素会报错（高版本）</li></ul></li> <li>枚举（默认情况下元素编号从 0 开始，可以手动指定编号）</li> <li>null</li> <li>undefined</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 布尔值 boolean
+const isDone: boolean = false
+
+// 数字 number
+const decLiteral: number = 1
+const hexLiteral: number = 0xf00d
+const binaryLiteral: number = 0b10
+const octalLiteral: number = 0o3
+
+// 字符串 string
+const str: string = '123'
+
+// 空值 void
+function alert(): void {
+  alert('test!')
+}
+
+// null 和 undefined
+// 指定&quot;strictNullChecks&quot;: false时，null和undefined是所有类型的子类型
+// 指定&quot;strictNullChecks&quot;: true时b, c, d, g, h会报错
+const a: void = undefined
+const b: void = null
+const c: number = null
+const d: number = undefined
+const e: null = null
+const f: undefined = undefined
+const g: null = undefined
+const h: undefined = null
+
+// Symbol
+const sym: symbol = Symbol('key')
+
+// BigInt
+// 需要使用BigInt将数字转换为BigInt
+const big: bigint = BigInt(2**55)
+
+// any
+let notSure: any = 2
+notSure = '2'
+
+// unknown
+// unknown 是any类型对应的安全类型，在使用前必须对类型做出判断
+let value: unknown
+value = 123
+if (typeof value === &quot;number&quot;) {
+  value += 1
+}
+value = [1,2,3]
+if (value instanceof Array) {
+  value.push(4)
+}
+
+// never
+function error(msg: string): never {
+  throw new Error(msg)
+}
+// 空数组，而且永远为空，不能添加元素
+const empty: never[] = []
+
+// 数组
+const arr: number[] = [1, 2]
+const arr1: Array&lt;number&gt; = [1, 2]
+interface NumberArray {
+  [index: number]: number
+}
+const arr2: NumberArray = [1, 2]
+// 注：类数组不是数组类型，比如arguments等，事实上常见的类数组都有自己的接口定义，如 IArguments, NodeList, HTMLCollection 等
+
+// 元组
+const list: [string, number] = ['123', 123]
+
+// 枚举
+// 数字枚举
+enum Color {Red = 1, Green, Blue}
+const color: Color = Color.Green    // 2
+const colorName: string = Color[2]  // Green
+// 字符串枚举
+enum Direction {
+  Up = 'Up',
+  Down = 'Down',
+  Left = 'Left',
+  Right = 'Right',
+}
+// 异构枚举
+enum BooleanLike {
+  No = 0,
+  Yes = 'Yes'
+}
+// 常量枚举
+const enum ValueEnums {
+  a = 'A',
+  b = 'B'
+}
+const enumValue = ValueEnums.a
+
+// Object
+// object 表示非原始类型，也就是除 number，string，boolean，symbol，null 或 undefined 之外的类型。
+// 我们看到,普通对象、枚举、数组、元组通通都是 object 类型。
+let obj: object
+obj = {}
+obj = []
+obj = Color
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br></div></div><blockquote><p>注：TypeScript 的原始类型写为 boolean、number、string 等等，在 JavaScript 中都有类似的关键字 Boolean、Number、String。
+后者是 JavaScript 中的构造函数，而 Typescript 中 number 仅仅便是类型。</p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/8/2021, 8:06:06 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/frame/typescript/02.类型.html">
+        类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.485de0ca.js" defer></script><script src="/assets/js/2.f72d9393.js" defer></script><script src="/assets/js/44.48bf98df.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS 异步加载的方式有哪些？ | 半山烟雨的个人网站</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script> if (
+    !sessionStorage.getItem('_swa') &&
+    document.referrer.indexOf(location.protocol + '//' + location.host) !== 0
+  ) {
+    fetch(
+      'https://counter.dev/track?' +
+        new URLSearchParams({
+          referrer: document.referrer,
+          screen: screen.width + 'x' + screen.height,
+          user: 'lijianru',
+          utcoffset: '8',
+        })
+    );
+  }
+  sessionStorage.setItem('_swa', '1');</script>
+    <meta name="description" content="半山烟雨, lijianru">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.485de0ca.js" as="script"><link rel="preload" href="/assets/js/2.f72d9393.js" as="script"><link rel="preload" href="/assets/js/20.8b2f2f73.js" as="script"><link rel="prefetch" href="/assets/js/10.8b7f77f6.js"><link rel="prefetch" href="/assets/js/11.31ed5bc2.js"><link rel="prefetch" href="/assets/js/12.dd35bbe2.js"><link rel="prefetch" href="/assets/js/13.7637e0f0.js"><link rel="prefetch" href="/assets/js/14.88366b12.js"><link rel="prefetch" href="/assets/js/15.fb18ecd1.js"><link rel="prefetch" href="/assets/js/16.e17839c4.js"><link rel="prefetch" href="/assets/js/17.1d5d3358.js"><link rel="prefetch" href="/assets/js/18.55e4d89c.js"><link rel="prefetch" href="/assets/js/19.4481dba9.js"><link rel="prefetch" href="/assets/js/21.f5c0946f.js"><link rel="prefetch" href="/assets/js/22.659f5382.js"><link rel="prefetch" href="/assets/js/23.e7c5a249.js"><link rel="prefetch" href="/assets/js/24.69cf8071.js"><link rel="prefetch" href="/assets/js/25.c36628a8.js"><link rel="prefetch" href="/assets/js/26.9d84755d.js"><link rel="prefetch" href="/assets/js/27.701ab03e.js"><link rel="prefetch" href="/assets/js/28.c265cf41.js"><link rel="prefetch" href="/assets/js/29.34a6fc0d.js"><link rel="prefetch" href="/assets/js/3.20fa9ed5.js"><link rel="prefetch" href="/assets/js/30.29409ba0.js"><link rel="prefetch" href="/assets/js/31.e845f04f.js"><link rel="prefetch" href="/assets/js/32.372ff8ec.js"><link rel="prefetch" href="/assets/js/33.20583bbf.js"><link rel="prefetch" href="/assets/js/34.5027a72f.js"><link rel="prefetch" href="/assets/js/35.837bf1c9.js"><link rel="prefetch" href="/assets/js/36.545c82f9.js"><link rel="prefetch" href="/assets/js/37.5c6ba971.js"><link rel="prefetch" href="/assets/js/38.f436f44b.js"><link rel="prefetch" href="/assets/js/39.6ff7877a.js"><link rel="prefetch" href="/assets/js/4.0cf0b3b5.js"><link rel="prefetch" href="/assets/js/40.27c26fd6.js"><link rel="prefetch" href="/assets/js/41.a31a8d54.js"><link rel="prefetch" href="/assets/js/42.0d8f611b.js"><link rel="prefetch" href="/assets/js/43.f667af3d.js"><link rel="prefetch" href="/assets/js/44.48bf98df.js"><link rel="prefetch" href="/assets/js/45.8e3ff653.js"><link rel="prefetch" href="/assets/js/46.c1f7ef9b.js"><link rel="prefetch" href="/assets/js/47.61ec84a2.js"><link rel="prefetch" href="/assets/js/48.1b967f2a.js"><link rel="prefetch" href="/assets/js/49.bf33b59e.js"><link rel="prefetch" href="/assets/js/5.0559d5c3.js"><link rel="prefetch" href="/assets/js/50.82b35738.js"><link rel="prefetch" href="/assets/js/51.3f34ab2c.js"><link rel="prefetch" href="/assets/js/52.0a29b33a.js"><link rel="prefetch" href="/assets/js/53.b4b3d768.js"><link rel="prefetch" href="/assets/js/54.95def4c3.js"><link rel="prefetch" href="/assets/js/55.e55b9e6f.js"><link rel="prefetch" href="/assets/js/56.c35d7ed9.js"><link rel="prefetch" href="/assets/js/57.d62f768a.js"><link rel="prefetch" href="/assets/js/58.551418cc.js"><link rel="prefetch" href="/assets/js/59.3e12c612.js"><link rel="prefetch" href="/assets/js/6.45c573e9.js"><link rel="prefetch" href="/assets/js/60.a8575d9c.js"><link rel="prefetch" href="/assets/js/61.28bfbee7.js"><link rel="prefetch" href="/assets/js/62.ece6c483.js"><link rel="prefetch" href="/assets/js/63.2829db51.js"><link rel="prefetch" href="/assets/js/64.bf762787.js"><link rel="prefetch" href="/assets/js/65.e7aff98b.js"><link rel="prefetch" href="/assets/js/66.97c9b599.js"><link rel="prefetch" href="/assets/js/67.4798fef6.js"><link rel="prefetch" href="/assets/js/68.1bb36f4d.js"><link rel="prefetch" href="/assets/js/69.65aa1340.js"><link rel="prefetch" href="/assets/js/7.8e088433.js"><link rel="prefetch" href="/assets/js/8.3c1f64f7.js"><link rel="prefetch" href="/assets/js/9.74b3dc88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="半山烟雨的个人网站" class="logo"> <span class="site-name can-hide">半山烟雨的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/daily/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/daily/html.html" class="sidebar-link">HTML篇</a></li><li><a href="/daily/css.html" class="sidebar-link">CSS篇</a></li><li><a href="/daily/javaScript-01-简介、脚本的引入.html" class="active sidebar-link">JS篇-简介、脚本的引入</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/daily/javaScript-01-简介、脚本的引入.html#js-异步加载的方式有哪些" class="sidebar-link">JS 异步加载的方式有哪些？</a></li><li class="sidebar-sub-header"><a href="/daily/javaScript-01-简介、脚本的引入.html#script-标签的-defer-和-async-属性的区别是什么" class="sidebar-link">script 标签的 defer 和 async 属性的区别是什么？</a></li></ul></li><li><a href="/daily/javaScript-02-数据类型、操作符、语句.html" class="sidebar-link">JS篇-数据类型、操作符、语句</a></li><li><a href="/daily/javaScript-03-函数、作用域、this、闭包.html" class="sidebar-link">JS篇-函数、作用域、this、闭包</a></li><li><a href="/daily/javaScript-04-原型、原型链、继承.html" class="sidebar-link">JS篇-原型、原型链、继承</a></li><li><a href="/daily/javaScript-06-异步.html" class="sidebar-link">JS篇-异步</a></li><li><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html" class="sidebar-link">JS篇-BOM、DOM、事件、JS动画</a></li><li><a href="/daily/javaScript-08-其他.html" class="sidebar-link">JS篇-其他</a></li><li><a href="/daily/算法.html" class="sidebar-link">算法篇</a></li><li><a href="/daily/浏览器&amp;网络&amp;安全&amp;性能优化.html" class="sidebar-link">浏览器&amp;网络&amp;安全&amp;性能优化篇</a></li><li><a href="/daily/React.html" class="sidebar-link">React篇</a></li><li><a href="/daily/webpack.html" class="sidebar-link">webpack篇</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="js-异步加载的方式有哪些"><a href="#js-异步加载的方式有哪些" class="header-anchor">#</a> JS 异步加载的方式有哪些？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>script 标签的 defer 属性</li> <li>script 标签的 async 属性</li> <li>动态插入 script 脚本</li></ul></details> <h2 id="script-标签的-defer-和-async-属性的区别是什么"><a href="#script-标签的-defer-和-async-属性的区别是什么" class="header-anchor">#</a> script 标签的 defer 和 async 属性的区别是什么？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>渲染引擎遇见 defer 属性就会开始下载外部脚本，但不会等它下载和执行，等到整个页面正常渲染结束（DOM 结构完全生成，以及其他脚本执行完成），在 window.onload 之前执行。</li> <li>async 的下载不会阻塞渲染，但是一旦下载完成渲染引擎就会中断渲染，执行这个脚本之后再继续渲染。</li> <li>在加载多个脚本的时候 async 加载是没有顺序的，而 defer 是有顺序的</li></ul></details></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/11/2021, 12:13:21 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/daily/css.html" class="prev">
+        CSS篇
+      </a></span> <span class="next"><a href="/daily/javaScript-02-数据类型、操作符、语句.html">
+        JS篇-数据类型、操作符、语句
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.485de0ca.js" defer></script><script src="/assets/js/2.f72d9393.js" defer></script><script src="/assets/js/20.8b2f2f73.js" defer></script>
+  </body>
+</html>

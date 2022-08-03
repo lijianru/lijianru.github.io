@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>em 和 rem | 半山烟雨的个人网站</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script> if (
+    !sessionStorage.getItem('_swa') &&
+    document.referrer.indexOf(location.protocol + '//' + location.host) !== 0
+  ) {
+    fetch(
+      'https://counter.dev/track?' +
+        new URLSearchParams({
+          referrer: document.referrer,
+          screen: screen.width + 'x' + screen.height,
+          user: 'lijianru',
+          utcoffset: '8',
+        })
+    );
+  }
+  sessionStorage.setItem('_swa', '1');</script>
+    <meta name="description" content="半山烟雨, lijianru">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.485de0ca.js" as="script"><link rel="preload" href="/assets/js/2.f72d9393.js" as="script"><link rel="preload" href="/assets/js/17.1d5d3358.js" as="script"><link rel="prefetch" href="/assets/js/10.8b7f77f6.js"><link rel="prefetch" href="/assets/js/11.31ed5bc2.js"><link rel="prefetch" href="/assets/js/12.dd35bbe2.js"><link rel="prefetch" href="/assets/js/13.7637e0f0.js"><link rel="prefetch" href="/assets/js/14.88366b12.js"><link rel="prefetch" href="/assets/js/15.fb18ecd1.js"><link rel="prefetch" href="/assets/js/16.e17839c4.js"><link rel="prefetch" href="/assets/js/18.55e4d89c.js"><link rel="prefetch" href="/assets/js/19.4481dba9.js"><link rel="prefetch" href="/assets/js/20.8b2f2f73.js"><link rel="prefetch" href="/assets/js/21.f5c0946f.js"><link rel="prefetch" href="/assets/js/22.659f5382.js"><link rel="prefetch" href="/assets/js/23.e7c5a249.js"><link rel="prefetch" href="/assets/js/24.69cf8071.js"><link rel="prefetch" href="/assets/js/25.c36628a8.js"><link rel="prefetch" href="/assets/js/26.9d84755d.js"><link rel="prefetch" href="/assets/js/27.701ab03e.js"><link rel="prefetch" href="/assets/js/28.c265cf41.js"><link rel="prefetch" href="/assets/js/29.34a6fc0d.js"><link rel="prefetch" href="/assets/js/3.20fa9ed5.js"><link rel="prefetch" href="/assets/js/30.29409ba0.js"><link rel="prefetch" href="/assets/js/31.e845f04f.js"><link rel="prefetch" href="/assets/js/32.372ff8ec.js"><link rel="prefetch" href="/assets/js/33.20583bbf.js"><link rel="prefetch" href="/assets/js/34.5027a72f.js"><link rel="prefetch" href="/assets/js/35.837bf1c9.js"><link rel="prefetch" href="/assets/js/36.545c82f9.js"><link rel="prefetch" href="/assets/js/37.5c6ba971.js"><link rel="prefetch" href="/assets/js/38.f436f44b.js"><link rel="prefetch" href="/assets/js/39.6ff7877a.js"><link rel="prefetch" href="/assets/js/4.0cf0b3b5.js"><link rel="prefetch" href="/assets/js/40.27c26fd6.js"><link rel="prefetch" href="/assets/js/41.a31a8d54.js"><link rel="prefetch" href="/assets/js/42.0d8f611b.js"><link rel="prefetch" href="/assets/js/43.f667af3d.js"><link rel="prefetch" href="/assets/js/44.48bf98df.js"><link rel="prefetch" href="/assets/js/45.8e3ff653.js"><link rel="prefetch" href="/assets/js/46.c1f7ef9b.js"><link rel="prefetch" href="/assets/js/47.61ec84a2.js"><link rel="prefetch" href="/assets/js/48.1b967f2a.js"><link rel="prefetch" href="/assets/js/49.bf33b59e.js"><link rel="prefetch" href="/assets/js/5.0559d5c3.js"><link rel="prefetch" href="/assets/js/50.82b35738.js"><link rel="prefetch" href="/assets/js/51.3f34ab2c.js"><link rel="prefetch" href="/assets/js/52.0a29b33a.js"><link rel="prefetch" href="/assets/js/53.b4b3d768.js"><link rel="prefetch" href="/assets/js/54.95def4c3.js"><link rel="prefetch" href="/assets/js/55.e55b9e6f.js"><link rel="prefetch" href="/assets/js/56.c35d7ed9.js"><link rel="prefetch" href="/assets/js/57.d62f768a.js"><link rel="prefetch" href="/assets/js/58.551418cc.js"><link rel="prefetch" href="/assets/js/59.3e12c612.js"><link rel="prefetch" href="/assets/js/6.45c573e9.js"><link rel="prefetch" href="/assets/js/60.a8575d9c.js"><link rel="prefetch" href="/assets/js/61.28bfbee7.js"><link rel="prefetch" href="/assets/js/62.ece6c483.js"><link rel="prefetch" href="/assets/js/63.2829db51.js"><link rel="prefetch" href="/assets/js/64.bf762787.js"><link rel="prefetch" href="/assets/js/65.e7aff98b.js"><link rel="prefetch" href="/assets/js/66.97c9b599.js"><link rel="prefetch" href="/assets/js/67.4798fef6.js"><link rel="prefetch" href="/assets/js/68.1bb36f4d.js"><link rel="prefetch" href="/assets/js/69.65aa1340.js"><link rel="prefetch" href="/assets/js/7.8e088433.js"><link rel="prefetch" href="/assets/js/8.3c1f64f7.js"><link rel="prefetch" href="/assets/js/9.74b3dc88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="半山烟雨的个人网站" class="logo"> <span class="site-name can-hide">半山烟雨的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link router-link-active">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/daily/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/daily/html.html" class="sidebar-link">HTML篇</a></li><li><a href="/daily/css.html" aria-current="page" class="active sidebar-link">CSS篇</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/daily/css.html#em-和-rem" class="sidebar-link">em 和 rem</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#css-盒模型" class="sidebar-link">css 盒模型</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#css-选择器有哪些-权重是什么" class="sidebar-link">css 选择器有哪些？权重是什么？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#什么是伪类-什么是伪元素" class="sidebar-link">什么是伪类？什么是伪元素？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#after-和-after-的区别是什么" class="sidebar-link">::after 和:after 的区别是什么</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#css-新特性" class="sidebar-link">css 新特性</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#行内元素和块级元素的区别" class="sidebar-link">行内元素和块级元素的区别</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#绝对定位-相对定位和固定定位的区别" class="sidebar-link">绝对定位，相对定位和固定定位的区别</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#什么是-bfc-如何产生-bfc-作用是什么" class="sidebar-link">什么是 BFC？如何产生 BFC？作用是什么？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#实现三栏布局-左右宽度固定-中间自适应" class="sidebar-link">实现三栏布局，左右宽度固定，中间自适应</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#清除浮动的方法" class="sidebar-link">清除浮动的方法？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#什么是-css-层叠上下文-形成条件-层叠等级" class="sidebar-link">什么是 CSS 层叠上下文？形成条件？层叠等级？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#垂直水平居中" class="sidebar-link">垂直水平居中</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#link-与-import-的区别" class="sidebar-link">link 与@import 的区别</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#单行文本省略" class="sidebar-link">单行文本省略</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#多行元素文本省略" class="sidebar-link">多行元素文本省略</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#如何让元素消失" class="sidebar-link">如何让元素消失？</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#calc-函数" class="sidebar-link">calc 函数</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#css-画半圆、扇形、三角形、梯形" class="sidebar-link">CSS 画半圆、扇形、三角形、梯形</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#transition-和-animation-的区别" class="sidebar-link">transition 和 animation 的区别</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#flex-布局" class="sidebar-link">flex 布局</a></li><li class="sidebar-sub-header"><a href="/daily/css.html#grid-布局" class="sidebar-link">grid 布局</a></li></ul></li><li><a href="/daily/javaScript-01-简介、脚本的引入.html" class="sidebar-link">JS篇-简介、脚本的引入</a></li><li><a href="/daily/javaScript-02-数据类型、操作符、语句.html" class="sidebar-link">JS篇-数据类型、操作符、语句</a></li><li><a href="/daily/javaScript-03-函数、作用域、this、闭包.html" class="sidebar-link">JS篇-函数、作用域、this、闭包</a></li><li><a href="/daily/javaScript-04-原型、原型链、继承.html" class="sidebar-link">JS篇-原型、原型链、继承</a></li><li><a href="/daily/javaScript-06-异步.html" class="sidebar-link">JS篇-异步</a></li><li><a href="/daily/javaScript-07-BOM、DOM、事件、JS动画.html" class="sidebar-link">JS篇-BOM、DOM、事件、JS动画</a></li><li><a href="/daily/javaScript-08-其他.html" class="sidebar-link">JS篇-其他</a></li><li><a href="/daily/算法.html" class="sidebar-link">算法篇</a></li><li><a href="/daily/浏览器&amp;网络&amp;安全&amp;性能优化.html" class="sidebar-link">浏览器&amp;网络&amp;安全&amp;性能优化篇</a></li><li><a href="/daily/React.html" class="sidebar-link">React篇</a></li><li><a href="/daily/webpack.html" class="sidebar-link">webpack篇</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="em-和-rem"><a href="#em-和-rem" class="header-anchor">#</a> em 和 rem</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>em 单位的意思是父元素字体大小</li> <li>rem 单位的意思是根元素字体大小
+<ul><li>当浏览器解析 HTML 文档时，创建了一个用来代表页面元素的集合，叫做 DOM（文档对象模型，Document Object Model）。树状结构，每一个节点代表一个元素。<code>&lt;html&gt;</code>就是顶层节点（根节点），在下面的是它的子节点<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>，再往下就是它们的子节点，还有后代节点，如此类推。</li></ul></li> <li>em 会根据父元素的字体大小计算当前元素的尺寸。rem 会根据根节点的字体大小计算当前元素的尺寸。</li></ul></details> <h2 id="css-盒模型"><a href="#css-盒模型" class="header-anchor">#</a> css 盒模型</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>CSS 和模型包括 margin、border、padding 和 content</li> <li>标准盒模型
+<ul><li>box-sizing: content-box</li> <li>width === content width</li> <li>背景颜色会显示在 padding 和 content 区域</li></ul></li> <li>怪异盒模型（IE 盒模型）
+<ul><li>box-sizing: border-box</li> <li>width === content width + padding left + padding right + border left + border right</li> <li>背景颜色会显示在 border、padding 和 content 区域</li></ul></li></ul></details> <h2 id="css-选择器有哪些-权重是什么"><a href="#css-选择器有哪些-权重是什么" class="header-anchor">#</a> css 选择器有哪些？权重是什么？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>选择器
+<ul><li>7 中基础选择器
+<ul><li>ID 选择器， 如 #id{}</li> <li>类选择器， 如 .class{}</li> <li>属性选择器， 如 a[href=&quot;segmentfault.com&quot;]{}</li> <li>伪类选择器， 如 :hover{}</li> <li>伪元素选择器， 如 ::before{}</li> <li>标签选择器， 如 span{}</li> <li>通配选择器， 如 *{}</li></ul></li> <li>3 种组合选择器
+<ul><li>后代选择符： .father .child{}</li> <li>子选择符： .father &gt; .child{}</li> <li>相邻选择符: .bro1 + .bro2{}</li></ul></li></ul></li> <li>权重：important &gt; 行内样式 &gt; ID 选择器 &gt; 类选择器 = 属性选择器 = 伪类选择器 &gt; 标签选择器 = 伪元素选择器</li></ul></details> <h2 id="什么是伪类-什么是伪元素"><a href="#什么是伪类-什么是伪元素" class="header-anchor">#</a> 什么是伪类？什么是伪元素？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>CSS 伪类是添加到选择器的关键字，指定要选择的元素的特殊状态、鼠标的位置以及外部因素来应用样式，一个选择器中可以同时写多个伪类</li> <li>伪元素是一个附加至选择器末的关键字，允许对被选择元素的特定部分修改样式，一个选择器只能使用一个伪元素。伪元素必须紧跟在语句中的简单选则器/基础选择器之后。</li></ul></details> <h2 id="after-和-after-的区别是什么"><a href="#after-和-after-的区别是什么" class="header-anchor">#</a> <code>::after</code> 和<code>:after</code> 的区别是什么</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>按照规范，伪元素应该使用双冒号（::）而不是单个冒号（:），以便区分伪类和伪元素。
+但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。</li></ul></details> <h2 id="css-新特性"><a href="#css-新特性" class="header-anchor">#</a> css 新特性</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>calc() 函数</li> <li>transition 过渡</li> <li>transform 旋转、缩放、移动、倾斜</li> <li>animation 动画</li> <li>gradient 渐变</li> <li>shadow 阴影</li> <li>text-shadow 文字阴影</li> <li>border-radius 圆角</li></ul></details> <h2 id="行内元素和块级元素的区别"><a href="#行内元素和块级元素的区别" class="header-anchor">#</a> 行内元素和块级元素的区别</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>行内元素
+<ul><li>display: inline</li> <li>高度和宽度是由内容决定的，与其他行内元素共占一行</li></ul></li> <li>块级元素
+<ul><li>display: block</li> <li>默认宽度由父容器决定，默认高度由内容决定，独占一行</li></ul></li></ul></details> <h2 id="绝对定位-相对定位和固定定位的区别"><a href="#绝对定位-相对定位和固定定位的区别" class="header-anchor">#</a> 绝对定位，相对定位和固定定位的区别</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>绝对定位
+<ul><li>position: absolute</li> <li>相对于元素最近的已定位的祖先元素，无已定位的祖先元素时，以 body 元素为偏移参照的基准</li> <li>完全脱离了标准文档流</li></ul></li> <li>相对定位
+<ul><li>position: relative</li> <li>相对于元素在文档中的初始位置</li> <li>未脱离文档流</li> <li>position:relative 对 table-*-group, table-row, table-column, table-cell, table-caption 元素无效。</li></ul></li> <li>固定定位
+<ul><li>position: fixed</li> <li>相对于视口来定位（当元素祖先的 transform, perspective 或 filter 属性非 none 时，容器由视口改为该祖先。）</li> <li>脱离文档流</li></ul></li></ul></details> <h2 id="什么是-bfc-如何产生-bfc-作用是什么"><a href="#什么是-bfc-如何产生-bfc-作用是什么" class="header-anchor">#</a> 什么是 BFC？如何产生 BFC？作用是什么？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>Block formatting contexts 块级格式化上下文，简称 BFC，它是一个独立的渲染区域，让处于 BFC 内部的元素和外部的元素相互隔离，使内外元素的定位不会相互影响</li> <li>产生
+<ul><li>根元素</li> <li>浮动元素（元素的 float 不是 none）</li> <li>绝对/固定定位元素（元素的 position 为 absolute 或 fixed）</li> <li>行内块元素（元素的 display 为 inline-block）</li> <li>overflow 值不为 visible 的块元素</li> <li>弹性元素（display 为 flex 或 inline-flex 元素的直接子元素）</li></ul></li> <li>作用
+<ul><li>自适应两（三）栏布局</li> <li>可以阻止元素被浮动快元素覆盖</li> <li>可以清除浮动</li> <li>分属不同 BFC 时可以阻止 margin 重叠</li></ul></li></ul></details> <h2 id="实现三栏布局-左右宽度固定-中间自适应"><a href="#实现三栏布局-左右宽度固定-中间自适应" class="header-anchor">#</a> 实现三栏布局，左右宽度固定，中间自适应</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>CSS 浮动：第一个 float:left，第二个 float:right，第三个设置 margin-left 和 margin-right</li> <li>BFC：第一个 float:left，第二个 float:right，第三个设置 overflow: hidden</li> <li>绝对定位：第一个定位到 left，第二个定位到 right，第三个设置 margin-left 和 margin-right</li> <li>flex 布局：父元素设置 display: flex，第一个、第三个设置宽度，第二个设置 flex: 1</li> <li>grid 布局：父元素设置 display: grid; grid-template-columns: 100px 1fr 200px;</li></ul></details> <h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="header-anchor">#</a> 清除浮动的方法？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>额外标签法：在最后一个浮动标签后新加一个标签，给其设置 clear: both（不推荐）
+<ul><li>通俗易懂，较方便</li> <li>添加无意义的标签，语义化比较差</li></ul></li> <li>父级添加 overflow 属性法：父级添加 overflow 属性（不推荐）
+<ul><li>代码简洁</li> <li>内容增多的时候容易造成不会自动换行导致内容被隐藏掉，无法显示要溢出的元素</li></ul></li> <li>after 伪元素法：使用 after 伪元素清除浮动，给父元素添加（推荐）
+<ul><li>符合闭合浮动思想，结构语义化正确</li> <li>ie6-7 不支持伪元素：after，使用 zoom:1 触发 hasLayout.</li></ul></li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.clearfix:after</span> <span class="token punctuation">{</span>
+  <span class="token comment">/*伪元素是行内元素 正常浏览器清除浮动方法*/</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+  <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix</span> <span class="token punctuation">{</span>
+  *<span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token comment">/*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>before 和 after 双伪元素清除浮动
+<ul><li>代码简洁</li> <li>使用 zoom: 1 触发 hasLayout</li></ul></li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.clearfix:after,
+.clearfix:before</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix:after</span> <span class="token punctuation">{</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix</span> <span class="token punctuation">{</span>
+  *<span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></details> <h2 id="什么是-css-层叠上下文-形成条件-层叠等级"><a href="#什么是-css-层叠上下文-形成条件-层叠等级" class="header-anchor">#</a> 什么是 CSS 层叠上下文？形成条件？层叠等级？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>假定用户正面向视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 Z 轴排开，层叠上下文就是对这些 HTML 元素的三维构想。其中 HTML 元素基于其元素的属性按照优先级顺序占据这个空间。</li> <li>形成条件
+<ul><li>文档根元素 html</li> <li>position 值为 absolute、relative 且 z-index 值不为 auto 的元素</li> <li>position 值为 fixed、sticky 的元素</li> <li>flex(flexbox)容器的子元素且 z-index 不为 auto</li> <li>grid(grid)容器的子元素且 z-index 值不为 auto</li> <li>opacity 属性值小于 1 的元素</li> <li>transform 属性不为 none 的元素</li> <li>filter 属性不为 none 的元素</li></ul></li> <li>层叠等级
+<ul><li>在同一层叠上下文中，层叠等级才有意义</li> <li>z-index 的优先级最高</li></ul></li></ul></details> <h2 id="垂直水平居中"><a href="#垂直水平居中" class="header-anchor">#</a> 垂直水平居中</h2> <details class="custom-block details"><summary>查看详情</summary> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token comment">/*1：须知道子元素宽高*/</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> -100px<span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> -100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*2：须知道子元素宽高*/</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>50% - 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>50% - 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*3：不须知道子元素宽高*/</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*4：不须知道子元素宽高*/</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">,</span> -50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*5：不须知道子元素宽高*/</span>
+<span class="token selector">.parent</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*6：不须知道子元素宽高*/</span>
+<span class="token selector">.parent</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>
+  <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*7：不须知道子元素宽高*/</span>
+<span class="token selector">.parent</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">justify-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br></div></div></details> <h2 id="link-与-import-的区别"><a href="#link-与-import-的区别" class="header-anchor">#</a> link 与@import 的区别</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>从属关系区别：link 是 HTML 提供的标签，不仅可以加载 css 文件，而且还可以定义 RSS，rel 连接属性等；@import 是 css 提供的语法规则，只能导入样式表；</li> <li>加载顺序区别：link 标签在加载页面时同时加载 css；@import 则是在页面加载完毕后加载；</li> <li>兼容性区别：link 作为 HTML 的标签不存在兼容性；@import 是在 CSS2.1 才有的语法；</li> <li>DOM 可控性区别：link 可以通过 JS 动态插入；@import 不行</li></ul></details> <h2 id="单行文本省略"><a href="#单行文本省略" class="header-anchor">#</a> 单行文本省略</h2> <details class="custom-block details"><summary>查看详情</summary> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/*文字长度超过限定的宽度则隐藏超出的内容*/</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span> <span class="token comment">/*设置文字在一行显示，不能换行*/</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> <span class="token comment">/*规定当文本溢出时，显示省略号来代表被修剪的文本*/</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details> <h2 id="多行元素文本省略"><a href="#多行元素文本省略" class="header-anchor">#</a> 多行元素文本省略</h2> <details class="custom-block details"><summary>查看详情</summary> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span> <span class="token comment">/* 限制一个块级元素显示文本的行数 */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span> <span class="token comment">/* 将对象作为弹性伸缩盒子模型显示 */</span>
+  <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span> <span class="token comment">/* 设置或者检索伸缩盒对象的子元素的排列方式 */</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></details> <h2 id="如何让元素消失"><a href="#如何让元素消失" class="header-anchor">#</a> 如何让元素消失？</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>完全消失：元素从渲染树中消失，不占据空间
+<ul><li>display: none，该元素隐藏起来了，但是会改变页面布局，可以理解为吧该元素删掉了</li> <li>hidden 属性</li></ul></li> <li>视觉上消失：屏幕中不可见，占据空间
+<ul><li>利用 position 将元素移出可视区范围</li> <li>利用 transfrom，缩放、移动、旋转元素</li> <li>设置宽高为 0，字体为 0 或者超出隐藏</li> <li>opacity: 0，该元素隐藏起来了，但是不会改变页面布局，如果元素已经绑定了一些事件也能够触发</li> <li>visibility: hidden，该元素隐藏起来了，但不会改变页面的布局，但是不会触发已绑定的事件</li> <li>z-index: -1 需要先定位，将 z-index 值小的藏在 z-index 大的下面</li></ul></li> <li>语义上消失：读屏软件不可读，但正常占据空间
+<ul><li>aria-hidden=&quot;true&quot;属性：占据空间，可见，但读屏软件不可读取</li></ul></li></ul></details> <h2 id="calc-函数"><a href="#calc-函数" class="header-anchor">#</a> calc 函数</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>calc()函数是 CSS3 新增的功能，可以使用 calc 计算 border,margin,padding,width,font-size 等属性</li> <li>注意：
+<ul><li>calc()函数只支持加减乘除运算</li> <li>运算符前后要保留一个空格</li> <li>对于不支持的浏览器来说，整个属性运算表达式会被忽略</li></ul></li></ul></details> <h2 id="css-画半圆、扇形、三角形、梯形"><a href="#css-画半圆、扇形、三角形、梯形" class="header-anchor">#</a> CSS 画半圆、扇形、三角形、梯形</h2> <details class="custom-block details"><summary>查看详情</summary> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token comment">/* 半圆 */</span>
+<span class="token selector">.half-circle</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50px 50px 0 0<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* 扇形 */</span>
+<span class="token selector">.sector</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 50px solid red<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> red transparent transparent transparent<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50px 50px 0 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* 三角 */</span>
+<span class="token selector">.triangle</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 50px solid red<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> red transparent transparent transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* 梯形 */</span>
+<span class="token selector">.ladder</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 50px solid red<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> red transparent transparent transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div></details> <h2 id="transition-和-animation-的区别"><a href="#transition-和-animation-的区别" class="header-anchor">#</a> transition 和 animation 的区别</h2> <details class="custom-block details"><summary>查看详情</summary> <ul><li>它们的大部分属性是相同的，都是随时间改变元素的属性值</li> <li>transition 需要触发一个事件才能改变属性，而 animation 不需要触发任何事件就能随时间改变属性值</li> <li>transition 只能定义两帧（from...to），而 animation 可以定义多帧</li></ul></details> <h2 id="flex-布局"><a href="#flex-布局" class="header-anchor">#</a> flex 布局</h2> <p>TODO:</p> <details class="custom-block details"><summary>查看详情</summary> <p><a href="/Css/flex布局.html">flex 布局</a></p></details> <h2 id="grid-布局"><a href="#grid-布局" class="header-anchor">#</a> grid 布局</h2> <p>TODO:</p> <details class="custom-block details"><summary>查看详情</summary> <p><a href="/Css/网格布局(Grid).html">grid 布局</a></p></details></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/11/2021, 12:13:21 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/daily/html.html" class="prev">
+        HTML篇
+      </a></span> <span class="next"><a href="/daily/javaScript-01-简介、脚本的引入.html">
+        JS篇-简介、脚本的引入
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.485de0ca.js" defer></script><script src="/assets/js/2.f72d9393.js" defer></script><script src="/assets/js/17.1d5d3358.js" defer></script>
+  </body>
+</html>

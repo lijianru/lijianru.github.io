@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>编译的上下文 | 半山烟雨的个人网站</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script> if (
+    !sessionStorage.getItem('_swa') &&
+    document.referrer.indexOf(location.protocol + '//' + location.host) !== 0
+  ) {
+    fetch(
+      'https://counter.dev/track?' +
+        new URLSearchParams({
+          referrer: document.referrer,
+          screen: screen.width + 'x' + screen.height,
+          user: 'lijianru',
+          utcoffset: '8',
+        })
+    );
+  }
+  sessionStorage.setItem('_swa', '1');</script>
+    <meta name="description" content="半山烟雨, lijianru">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.485de0ca.js" as="script"><link rel="preload" href="/assets/js/2.f72d9393.js" as="script"><link rel="preload" href="/assets/js/50.82b35738.js" as="script"><link rel="prefetch" href="/assets/js/10.8b7f77f6.js"><link rel="prefetch" href="/assets/js/11.31ed5bc2.js"><link rel="prefetch" href="/assets/js/12.dd35bbe2.js"><link rel="prefetch" href="/assets/js/13.7637e0f0.js"><link rel="prefetch" href="/assets/js/14.88366b12.js"><link rel="prefetch" href="/assets/js/15.fb18ecd1.js"><link rel="prefetch" href="/assets/js/16.e17839c4.js"><link rel="prefetch" href="/assets/js/17.1d5d3358.js"><link rel="prefetch" href="/assets/js/18.55e4d89c.js"><link rel="prefetch" href="/assets/js/19.4481dba9.js"><link rel="prefetch" href="/assets/js/20.8b2f2f73.js"><link rel="prefetch" href="/assets/js/21.f5c0946f.js"><link rel="prefetch" href="/assets/js/22.659f5382.js"><link rel="prefetch" href="/assets/js/23.e7c5a249.js"><link rel="prefetch" href="/assets/js/24.69cf8071.js"><link rel="prefetch" href="/assets/js/25.c36628a8.js"><link rel="prefetch" href="/assets/js/26.9d84755d.js"><link rel="prefetch" href="/assets/js/27.701ab03e.js"><link rel="prefetch" href="/assets/js/28.c265cf41.js"><link rel="prefetch" href="/assets/js/29.34a6fc0d.js"><link rel="prefetch" href="/assets/js/3.20fa9ed5.js"><link rel="prefetch" href="/assets/js/30.29409ba0.js"><link rel="prefetch" href="/assets/js/31.e845f04f.js"><link rel="prefetch" href="/assets/js/32.372ff8ec.js"><link rel="prefetch" href="/assets/js/33.20583bbf.js"><link rel="prefetch" href="/assets/js/34.5027a72f.js"><link rel="prefetch" href="/assets/js/35.837bf1c9.js"><link rel="prefetch" href="/assets/js/36.545c82f9.js"><link rel="prefetch" href="/assets/js/37.5c6ba971.js"><link rel="prefetch" href="/assets/js/38.f436f44b.js"><link rel="prefetch" href="/assets/js/39.6ff7877a.js"><link rel="prefetch" href="/assets/js/4.0cf0b3b5.js"><link rel="prefetch" href="/assets/js/40.27c26fd6.js"><link rel="prefetch" href="/assets/js/41.a31a8d54.js"><link rel="prefetch" href="/assets/js/42.0d8f611b.js"><link rel="prefetch" href="/assets/js/43.f667af3d.js"><link rel="prefetch" href="/assets/js/44.48bf98df.js"><link rel="prefetch" href="/assets/js/45.8e3ff653.js"><link rel="prefetch" href="/assets/js/46.c1f7ef9b.js"><link rel="prefetch" href="/assets/js/47.61ec84a2.js"><link rel="prefetch" href="/assets/js/48.1b967f2a.js"><link rel="prefetch" href="/assets/js/49.bf33b59e.js"><link rel="prefetch" href="/assets/js/5.0559d5c3.js"><link rel="prefetch" href="/assets/js/51.3f34ab2c.js"><link rel="prefetch" href="/assets/js/52.0a29b33a.js"><link rel="prefetch" href="/assets/js/53.b4b3d768.js"><link rel="prefetch" href="/assets/js/54.95def4c3.js"><link rel="prefetch" href="/assets/js/55.e55b9e6f.js"><link rel="prefetch" href="/assets/js/56.c35d7ed9.js"><link rel="prefetch" href="/assets/js/57.d62f768a.js"><link rel="prefetch" href="/assets/js/58.551418cc.js"><link rel="prefetch" href="/assets/js/59.3e12c612.js"><link rel="prefetch" href="/assets/js/6.45c573e9.js"><link rel="prefetch" href="/assets/js/60.a8575d9c.js"><link rel="prefetch" href="/assets/js/61.28bfbee7.js"><link rel="prefetch" href="/assets/js/62.ece6c483.js"><link rel="prefetch" href="/assets/js/63.2829db51.js"><link rel="prefetch" href="/assets/js/64.bf762787.js"><link rel="prefetch" href="/assets/js/65.e7aff98b.js"><link rel="prefetch" href="/assets/js/66.97c9b599.js"><link rel="prefetch" href="/assets/js/67.4798fef6.js"><link rel="prefetch" href="/assets/js/68.1bb36f4d.js"><link rel="prefetch" href="/assets/js/69.65aa1340.js"><link rel="prefetch" href="/assets/js/7.8e088433.js"><link rel="prefetch" href="/assets/js/8.3c1f64f7.js"><link rel="prefetch" href="/assets/js/9.74b3dc88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="半山烟雨的个人网站" class="logo"> <span class="site-name can-hide">半山烟雨的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  我的开源项目
+</a></div><div class="nav-item"><a href="/navigation/" class="nav-link">
+  导航页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架/库" class="dropdown-title"><span class="title">框架/库</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架/库" class="mobile-dropdown-title"><span class="title">框架/库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/frame/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li></ul></div></div><div class="nav-item"><a href="/daily/" class="nav-link">
+  每日一题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notebook/es6/" class="nav-link">
+  ES6
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lijianru" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/frame/typescript/01.ts中的数据类型.html" class="sidebar-link">ts中的数据类型</a></li><li><a href="/frame/typescript/02.类型.html" class="sidebar-link">类型</a></li><li><a href="/frame/typescript/03.内置对象的类型.html" class="sidebar-link">内置对象的类型</a></li><li><a href="/frame/typescript/04.装饰器.html" class="sidebar-link">装饰器</a></li><li><a href="/frame/typescript/05.模块与命名空间.html" class="sidebar-link">模块与命名空间</a></li><li><a href="/frame/typescript/06.typescript编译原理.html" class="sidebar-link">typescript编译原理</a></li><li><a href="/frame/typescript/07.Typescript项目配置.html" class="active sidebar-link">Typescript项目配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frame/typescript/07.Typescript项目配置.html#编译的上下文" class="sidebar-link">编译的上下文</a></li><li class="sidebar-sub-header"><a href="/frame/typescript/07.Typescript项目配置.html#声明空间" class="sidebar-link">声明空间</a></li><li class="sidebar-sub-header"><a href="/frame/typescript/07.Typescript项目配置.html#模块" class="sidebar-link">模块</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="编译的上下文"><a href="#编译的上下文" class="header-anchor">#</a> 编译的上下文</h2> <blockquote><p>使用 tsconfig.json 文件定义编译的上下文。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  // 编译选项
+  &quot;compilerOptions&quot;: {
+
+    /* 基本选项 */
+    &quot;target&quot;: &quot;es5&quot;,                       // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+    &quot;module&quot;: &quot;commonjs&quot;,                  // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    &quot;lib&quot;: [],                             // 指定要包含在编译中的库文件
+    &quot;allowJs&quot;: true,                       // 允许编译 javascript 文件
+    &quot;checkJs&quot;: true,                       // 报告 javascript 文件中的错误
+    &quot;jsx&quot;: &quot;preserve&quot;,                     // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+    &quot;declaration&quot;: true,                   // 生成相应的 '.d.ts' 文件
+    &quot;sourceMap&quot;: true,                     // 把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
+    &quot;outFile&quot;: &quot;./&quot;,                       // 将输出文件合并为一个文件
+    &quot;outDir&quot;: &quot;./&quot;,                        // 指定输出目录
+    &quot;rootDir&quot;: &quot;./&quot;,                       // 用来控制输出目录结构 --outDir.
+    &quot;removeComments&quot;: true,                // 删除编译后的所有的注释
+    &quot;noEmit&quot;: true,                        // 不生成输出文件
+    &quot;importHelpers&quot;: true,                 // 从 tslib 导入辅助工具函数
+    &quot;isolatedModules&quot;: true,               // 将每个文件做为单独的模块 （与 'ts.transpileModule' 类似）.
+
+    /* 严格的类型检查选项 */
+    &quot;strict&quot;: true,                        // 启用所有严格类型检查选项
+    &quot;noImplicitAny&quot;: true,                 // 在表达式和声明上有隐含的 any类型时报错
+    &quot;strictNullChecks&quot;: true,              // 启用严格的 null 检查
+    &quot;noImplicitThis&quot;: true,                // 当 this 表达式值为 any 类型的时候，生成一个错误
+    &quot;alwaysStrict&quot;: true,                  // 以严格模式检查每个模块，并在每个文件里加入 'use strict'
+
+    /* 额外的检查 */
+    &quot;noUnusedLocals&quot;: true,                // 有未使用的变量时，抛出错误
+    &quot;noUnusedParameters&quot;: true,            // 有未使用的参数时，抛出错误
+    &quot;noImplicitReturns&quot;: true,             // 并不是所有函数里的代码都有返回值时，抛出错误
+    &quot;noFallthroughCasesInSwitch&quot;: true,    // 报告 switch 语句的 fallthrough 错误。（即，不允许 switch 的 case 语句贯穿）
+
+    /* 模块解析选项 */
+    &quot;moduleResolution&quot;: &quot;node&quot;,            // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    &quot;baseUrl&quot;: &quot;./&quot;,                       // 用于解析非相对模块名称的基目录
+    &quot;paths&quot;: {},                           // 模块名到基于 baseUrl 的路径映射的列表
+    &quot;rootDirs&quot;: [],                        // 根文件夹列表，其组合内容表示项目运行时的结构内容
+    &quot;typeRoots&quot;: [],                       // 包含类型声明的文件列表
+    &quot;types&quot;: [],                           // 需要包含的类型声明文件名列表
+    &quot;allowSyntheticDefaultImports&quot;: true,  // 允许从没有设置默认导出的模块中默认导入。
+
+    /* Source Map Options */
+    &quot;sourceRoot&quot;: &quot;./&quot;,                    // 指定调试器应该找到 TypeScript 文件而不是源文件的位置
+    &quot;mapRoot&quot;: &quot;./&quot;,                       // 指定调试器应该找到映射文件而不是生成文件的位置
+    &quot;inlineSourceMap&quot;: true,               // 生成单个 soucemaps 文件，而不是将 sourcemaps 生成不同的文件
+    &quot;inlineSources&quot;: true,                 // 将代码与 sourcemaps 生成到一个文件中，要求同时设置了 --inlineSourceMap 或 --sourceMap 属性
+
+    /* 其他选项 */
+    &quot;experimentalDecorators&quot;: true,        // 启用装饰器
+    &quot;emitDecoratorMetadata&quot;: true          // 为装饰器提供元数据的支持
+  },
+  // 显示指定需要编译的文件
+  &quot;files&quot;: [
+    &quot;./some/file.ts&quot;
+  ],
+  // 指定需要包含的文件
+  &quot;include&quot;: [
+    &quot;./folder&quot;
+  ],
+  // 指定排除的文件
+  &quot;exclude&quot;: [
+    &quot;./folder/**/*.spec.ts&quot;,
+    &quot;./folder/someSubFolder&quot;
+  ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br></div></div><h2 id="声明空间"><a href="#声明空间" class="header-anchor">#</a> 声明空间</h2> <h3 id="类型声明空间"><a href="#类型声明空间" class="header-anchor">#</a> 类型声明空间</h3> <ul><li><code>class Foo {}</code></li> <li><code>interface Bar {}</code></li> <li><code>type Bas = {}</code></li></ul> <h3 id="变量声明空间"><a href="#变量声明空间" class="header-anchor">#</a> 变量声明空间</h3> <ul><li><code>class Foo {}</code></li> <li><code>const someVar = Foo</code></li> <li><code>const count = 1</code></li></ul> <h2 id="模块"><a href="#模块" class="header-anchor">#</a> 模块</h2> <h3 id="全局模块"><a href="#全局模块" class="header-anchor">#</a> 全局模块</h3> <blockquote><p>默认情况下当你在一个新的 TS 文件中定义如下变量时，它处于全局命名空间。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const foo = 123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="文件模块"><a href="#文件模块" class="header-anchor">#</a> 文件模块</h3> <blockquote><p>如果你在 TS 文件的跟级别含有 import 或者 export，它会在文件中创建一个本地的作用域。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>export const foo = 123
+// 或
+import { foo } from './foo'
+const bar = foo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>TODO
+https://juejin.im/book/5da08714518825520e6bb810/section/5dad55376fb9a04e0b0dbd70</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/8/2021, 8:06:06 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frame/typescript/06.typescript编译原理.html" class="prev">
+        typescript编译原理
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.485de0ca.js" defer></script><script src="/assets/js/2.f72d9393.js" defer></script><script src="/assets/js/50.82b35738.js" defer></script>
+  </body>
+</html>
