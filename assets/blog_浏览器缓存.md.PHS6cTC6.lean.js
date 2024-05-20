@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as i,a1 as t}from"./chunks/framework.Bw_Y1HHt.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"blog/浏览器缓存.md","filePath":"blog/浏览器缓存.md"}'),o={name:"blog/浏览器缓存.md"},l=t("",35),s=[l];function h(r,n,p,c,d,k){return i(),e("div",null,s)}const m=a(o,[["render",h]]);export{b as __pageData,m as default};
