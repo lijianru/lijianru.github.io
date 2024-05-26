@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,a3 as a}from"./chunks/framework.CScuXPqu.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/redux.md","filePath":"daily/redux.md"}'),s={name:"daily/redux.md"},l=a("",12),o=[l];function c(i,d,u,n,m,h){return r(),t("div",null,o)}const _=e(s,[["render",c]]);export{p as __pageData,_ as default};

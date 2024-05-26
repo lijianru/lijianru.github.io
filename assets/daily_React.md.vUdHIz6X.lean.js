@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a1 as t}from"./chunks/framework.Bw_Y1HHt.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/React.md","filePath":"daily/React.md"}'),l={name:"daily/React.md"},n=t("",70),h=[n];function e(k,p,r,E,d,c){return a(),i("div",null,h)}const g=s(l,[["render",e]]);export{y as __pageData,g as default};
