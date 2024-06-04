@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as l,a3 as i}from"./chunks/framework.CScuXPqu.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/webpack.md","filePath":"daily/webpack.md"}'),c={name:"daily/webpack.md"},s=i("",18),r=[s];function t(p,o,b,k,d,u){return l(),e("div",null,r)}const w=a(c,[["render",t]]);export{m as __pageData,w as default};

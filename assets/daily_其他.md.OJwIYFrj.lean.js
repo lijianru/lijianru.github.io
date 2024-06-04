@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a3 as s}from"./chunks/framework.CScuXPqu.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/其他.md","filePath":"daily/其他.md"}'),l={name:"daily/其他.md"},i=s("",4),o=[i];function r(d,c,_,n,p,m){return t(),e("div",null,o)}const f=a(l,[["render",r]]);export{h as __pageData,f as default};
