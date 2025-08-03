@@ -1,0 +1,1 @@
+import{_ as e,c as l,o as t,ag as o}from"./chunks/framework.S-Qvb3wi.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"blog/跨域问题.md","filePath":"blog/跨域问题.md"}'),i={name:"blog/跨域问题.md"};function r(s,a,n,c,h,d){return t(),l("div",null,a[0]||(a[0]=[o("",19)]))}const b=e(i,[["render",r]]);export{p as __pageData,b as default};

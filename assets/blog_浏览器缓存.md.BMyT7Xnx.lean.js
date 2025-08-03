@@ -1,0 +1,1 @@
+import{_ as e,c as i,o as t,ag as l}from"./chunks/framework.S-Qvb3wi.js";const k=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"blog/浏览器缓存.md","filePath":"blog/浏览器缓存.md"}'),o={name:"blog/浏览器缓存.md"};function s(h,a,r,n,p,c){return t(),i("div",null,a[0]||(a[0]=[l("",34)]))}const u=e(o,[["render",s]]);export{k as __pageData,u as default};
