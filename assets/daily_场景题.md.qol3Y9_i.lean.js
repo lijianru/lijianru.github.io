@@ -1,0 +1,1 @@
+import{_ as l,c as s,o as a,ag as t}from"./chunks/framework.S-Qvb3wi.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/场景题.md","filePath":"daily/场景题.md"}'),e={name:"daily/场景题.md"};function n(r,i,h,o,p,d){return a(),s("div",null,i[0]||(i[0]=[t("",43)]))}const c=l(e,[["render",n]]);export{u as __pageData,c as default};

@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as l,ag as t}from"./chunks/framework.S-Qvb3wi.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/React.md","filePath":"daily/React.md"}'),n={name:"daily/React.md"};function h(e,s,k,p,r,E){return l(),a("div",null,s[0]||(s[0]=[t("",88)]))}const o=i(n,[["render",h]]);export{c as __pageData,o as default};

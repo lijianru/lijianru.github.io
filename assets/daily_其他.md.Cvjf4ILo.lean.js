@@ -1,1 +1,0 @@
-import{_ as e,c as l,o as t,ag as s}from"./chunks/framework.S-Qvb3wi.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/其他.md","filePath":"daily/其他.md"}'),i={name:"daily/其他.md"};function o(r,a,d,n,p,c){return t(),l("div",null,a[0]||(a[0]=[s("",4)]))}const u=e(i,[["render",o]]);export{m as __pageData,u as default};

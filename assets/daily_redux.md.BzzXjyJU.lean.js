@@ -1,1 +1,0 @@
-import{_ as t,c as r,o as a,ag as s}from"./chunks/framework.S-Qvb3wi.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/redux.md","filePath":"daily/redux.md"}'),l={name:"daily/redux.md"};function o(u,e,c,d,i,n){return a(),r("div",null,e[0]||(e[0]=[s("",16)]))}const h=t(l,[["render",o]]);export{m as __pageData,h as default};

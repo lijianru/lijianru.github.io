@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as h}from"./chunks/framework.S-Qvb3wi.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/算法.md","filePath":"daily/算法.md"}'),k={name:"daily/算法.md"};function l(p,s,t,E,e,r){return n(),a("div",null,s[0]||(s[0]=[h("",30)]))}const y=i(k,[["render",l]]);export{g as __pageData,y as default};

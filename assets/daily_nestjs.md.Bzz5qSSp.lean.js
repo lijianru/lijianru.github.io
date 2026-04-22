@@ -1,1 +1,0 @@
-import{_ as a,c as t,o as s,ag as r}from"./chunks/framework.S-Qvb3wi.js";const S=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/nestjs.md","filePath":"daily/nestjs.md"}'),n={name:"daily/nestjs.md"};function i(o,e,l,h,d,c){return s(),t("div",null,e[0]||(e[0]=[r("",24)]))}const J=a(n,[["render",i]]);export{S as __pageData,J as default};
